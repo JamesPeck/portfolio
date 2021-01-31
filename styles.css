@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.landing {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  z-index: 2;
+}
+
+.landing img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.landing .text {
+  padding-left: 35%;
+  padding-bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.landing header {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3.25em; /*just incase browser doesn't support vw*/
+  font-size: 3.25vw;
+  padding: 75px;
+}
+
+.landing header h2 {
+  color: #4FB8FE;
+}
+
+.landing header .colon {
+  color: #d1d1d1;
+}
+
+.landing header h3 {
+  color: #CE9178;
+}
+
+.landing .buttons {
+  position: relative;
+}
+
+.landing .buttons a {
+  position: relative;
+  background-color: white;;
+  padding: 0.5vw 1.5vw;
+  margin: 10px;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  transform: rotate(45deg);
+  animation: 3.5s arrow infinite ease;
+  left: 50%;
+  margin-left: -20px;
+  cursor: pointer;
+}
+
+@keyframes arrow {
+  0%, 100% {
+      bottom: 3%;
+  }
+  50% {
+      bottom: 50px;
+  }
+}
